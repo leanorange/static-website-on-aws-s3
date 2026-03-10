@@ -29,16 +29,16 @@ i went to **permissions** → disabled **block public access**, then added the f
 
 ```json
 {
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "PublicReadGetObject",
-      "Effect": "Allow",
-      "Principal": "*",
-      "Action": "s3:GetObject",
-      "Resource": "arn:aws:s3:::YOUR-BUCKET-NAME/*"
-    }
-  ]
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Statement1",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::amzn-s3-bucket-prod-app1/*"
+        }
+    ]
 }
 ```
 
@@ -46,7 +46,7 @@ i went to **permissions** → disabled **block public access**, then added the f
 
 ### 4. uploaded index.html and accessed the website
 
-i uploaded my `index.html` file to the bucket and opened the bucket website endpoint url in the browser. the static website loaded successfully.
+i uploaded my `index.html` file to the bucket and opened the bucket website endpoint url in the browser. the static index.html loaded successfully.
 
 
 ![bucket website endpoint](architecture/bucket-website-endpoint.png)
